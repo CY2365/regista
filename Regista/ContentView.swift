@@ -9,8 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+		TabView {
+			NavigationView {
+				List {
+					NavigationLink(destination: Text("Match 1")) {
+						Text("match")
+					}
+				}
+				
+			}.tabItem {
+				Label("Match", systemImage: "sportscourt")
+			}
+			
+			List {
+				Text("name")
+			}.tabItem {
+				Label("Account", systemImage: "person.crop.circle")
+			}
+			
+		}
+        
     }
 }
 
