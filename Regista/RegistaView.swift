@@ -21,14 +21,19 @@ struct RegistaView: View {
 		}
         
     }
+    
+    private func dateToString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"
+        return dateFormatter.string(from: date)
+    }
 	
 	private var listView: some View {
 		NavigationView {
 			List {
 				ForEach(registaViewModel.getUser().matches) { match in
 					NavigationLink(destination: Text(match.location)) {
-						
-						Text((match.date))
+                        Text(dateToString(match.date))
 					}
 				}
 				
@@ -45,3 +50,5 @@ struct ContentView_Previews: PreviewProvider {
         RegistaView(registaViewModel: RegistaViewModel())
     }
 }
+
+
