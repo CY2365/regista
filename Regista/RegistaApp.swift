@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct RegistaApp: App {
+	let regista = RegistaViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RegistaView(registaViewModel: regista)
         }
     }
 }
