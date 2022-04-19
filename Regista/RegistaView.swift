@@ -8,46 +8,40 @@
 import SwiftUI
 
 struct RegistaView: View {
-	
-	@ObservedObject var registaViewModel: RegistaViewModel
-	
+    
+    @ObservedObject var vm: RegistaViewModel
+    
+    
     var body: some View {
 		TabView {
-			listView
 			AccountView()
 				.tabItem {
 					Label("Account", systemImage: "person.crop.circle")
 			}
-		}
-        
-    }
-    
-    private func dateToString(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/YYYY"
-        return dateFormatter.string(from: date)
+            listView
+        }
     }
 	
 	private var listView: some View {
 		NavigationView {
 			List {
-				ForEach(registaViewModel.getUser().matches) { match in
-					NavigationLink(destination: Text(match.location)) {
-                        Text(dateToString(match.date))
+                ForEach(vm.data.user.matches) { match in
+                    NavigationLink(destination: MatchView(vm: vm)) {
+                        Text(vm.dateToString(match.date))
 					}
 				}
 				
-			}
+            }.navigationBarTitle(Text("Your Matches"))
 			
 		}.tabItem {
-			Label("Match", systemImage: "sportscourt")
-		}
+			Label("Matches", systemImage: "sportscourt")
+        }
 	}
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistaView(registaViewModel: RegistaViewModel())
+        RegistaView(vm: RegistaViewModel())
     }
 }
 

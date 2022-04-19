@@ -8,11 +8,16 @@
 import SwiftUI
 
 class RegistaViewModel: ObservableObject {
-	
-	@Published var regista: RegistaModel = RegistaModel()
-	
-	func getUser() -> RegistaModel.Profile {
-		return regista.getUser()
-	}
-	
+    
+    @Published var data = RegistaData()
+    
+    func dateToString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"
+        return dateFormatter.string(from: date)
+    }
+    
+    func addMatches() {
+        data.addMatch()
+    }
 }

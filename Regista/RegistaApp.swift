@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct RegistaApp: App {
-	@StateObject var VM = RegistaViewModel()
+    
+    @StateObject var vm: RegistaViewModel = RegistaViewModel()
     
     var body: some Scene {
         WindowGroup {
-            RegistaView(registaViewModel: VM)
+            RegistaView(vm: vm)
         }
     }
 }
