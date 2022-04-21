@@ -9,17 +9,12 @@ import SwiftUI
 
 struct RegistaView: View {
     
-    @EnvironmentObject var viewModel: RegistaViewModel
-	
-	var matches: [RegistaData.Match] {
-		viewModel.data.user.matches
-	}
-    
+    @EnvironmentObject var data: RegistaData
     
     var body: some View {
 		TabView {
+            ListView().tabItem { Label("Matches", systemImage: "sportscourt") }
 			AccountView().tabItem { Label("Account", systemImage: "person.crop.circle") }
-			ListView(matches: matches).tabItem { Label("Matches", systemImage: "sportscourt") }
         }
     }
 	
@@ -28,6 +23,7 @@ struct RegistaView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         RegistaView()
+            .environmentObject(RegistaData())
     }
 }
 

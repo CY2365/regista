@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct RegistaApp: App {
     
-    @StateObject var viewModel: RegistaViewModel = RegistaViewModel()
+    @StateObject var data: RegistaData = RegistaData()
     
     var body: some Scene {
         WindowGroup {
             RegistaView()
-				.environmentObject(viewModel)
+				.environmentObject(data)
         }
     }
 }

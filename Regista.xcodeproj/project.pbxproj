@@ -12,9 +12,11 @@
 		B30F2D8C27F9D41500ADBFDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30F2D8B27F9D41500ADBFDF /* Assets.xcassets */; };
 		B30F2D8F27F9D41500ADBFDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30F2D8E27F9D41500ADBFDF /* Preview Assets.xcassets */; };
 		B30F2D9627F9E35500ADBFDF /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30F2D9527F9E35500ADBFDF /* AccountView.swift */; };
+		B3183D78281148B200E6EB6C /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3183D77281148B200E6EB6C /* Match.swift */; };
+		B3183D7A281148E100E6EB6C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3183D79281148E100E6EB6C /* Profile.swift */; };
+		B3183D7C2811533E00E6EB6C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3183D7B2811533E00E6EB6C /* MapView.swift */; };
 		B3219BD0280EE19000749DC5 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3219BCF280EE19000749DC5 /* MatchView.swift */; };
-		B321CC22280DE9F30073AA65 /* RegistaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321CC21280DE9F20073AA65 /* RegistaData.swift */; };
-		B321CC24280DED700073AA65 /* RegistaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321CC23280DED700073AA65 /* RegistaViewModel.swift */; };
+		B321CC24280DED700073AA65 /* RegistaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321CC23280DED700073AA65 /* RegistaData.swift */; };
 		B393EE21280F509400983706 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393EE20280F509400983706 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,9 +27,11 @@
 		B30F2D8B27F9D41500ADBFDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B30F2D8E27F9D41500ADBFDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B30F2D9527F9E35500ADBFDF /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		B3183D77281148B200E6EB6C /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		B3183D79281148E100E6EB6C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		B3183D7B2811533E00E6EB6C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		B3219BCF280EE19000749DC5 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
-		B321CC21280DE9F20073AA65 /* RegistaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistaData.swift; sourceTree = "<group>"; };
-		B321CC23280DED700073AA65 /* RegistaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistaViewModel.swift; sourceTree = "<group>"; };
+		B321CC23280DED700073AA65 /* RegistaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistaData.swift; sourceTree = "<group>"; };
 		B393EE20280F509400983706 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,12 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				B30F2D8727F9D41100ADBFDF /* RegistaApp.swift */,
-				B30F2D8927F9D41100ADBFDF /* RegistaView.swift */,
-				B393EE20280F509400983706 /* ListView.swift */,
-				B3219BCF280EE19000749DC5 /* MatchView.swift */,
-				B321CC23280DED700073AA65 /* RegistaViewModel.swift */,
-				B30F2D9527F9E35500ADBFDF /* AccountView.swift */,
-				B321CC21280DE9F20073AA65 /* RegistaData.swift */,
+				B3183D7528111EA200E6EB6C /* Views */,
+				B3183D7628111EA800E6EB6C /* Model */,
+				B3183D7428111E9B00E6EB6C /* Resources */,
 				B30F2D8B27F9D41500ADBFDF /* Assets.xcassets */,
 				B30F2D8D27F9D41500ADBFDF /* Preview Content */,
 			);
@@ -80,6 +81,35 @@
 				B30F2D8E27F9D41500ADBFDF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B3183D7428111E9B00E6EB6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B3183D7528111EA200E6EB6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B30F2D8927F9D41100ADBFDF /* RegistaView.swift */,
+				B393EE20280F509400983706 /* ListView.swift */,
+				B3219BCF280EE19000749DC5 /* MatchView.swift */,
+				B30F2D9527F9E35500ADBFDF /* AccountView.swift */,
+				B3183D7B2811533E00E6EB6C /* MapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B3183D7628111EA800E6EB6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B321CC23280DED700073AA65 /* RegistaData.swift */,
+				B3183D77281148B200E6EB6C /* Match.swift */,
+				B3183D79281148E100E6EB6C /* Profile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,12 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B321CC24280DED700073AA65 /* RegistaViewModel.swift in Sources */,
+				B321CC24280DED700073AA65 /* RegistaData.swift in Sources */,
 				B30F2D9627F9E35500ADBFDF /* AccountView.swift in Sources */,
-				B321CC22280DE9F30073AA65 /* RegistaData.swift in Sources */,
+				B3183D78281148B200E6EB6C /* Match.swift in Sources */,
 				B393EE21280F509400983706 /* ListView.swift in Sources */,
 				B30F2D8A27F9D41100ADBFDF /* RegistaView.swift in Sources */,
 				B3219BD0280EE19000749DC5 /* MatchView.swift in Sources */,
+				B3183D7A281148E100E6EB6C /* Profile.swift in Sources */,
+				B3183D7C2811533E00E6EB6C /* MapView.swift in Sources */,
 				B30F2D8827F9D41100ADBFDF /* RegistaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
