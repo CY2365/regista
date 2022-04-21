@@ -9,10 +9,10 @@ import SwiftUI
 
 struct MatchView: View {
     
-    @ObservedObject var vm: RegistaViewModel
+    @EnvironmentObject var viewModel: RegistaViewModel
     
     var date: String{
-        vm.dateToString(vm.data.user.matches[0].date)
+        viewModel.dateToString(viewModel.data.user.matches[0].date)
     }
     
     
@@ -21,11 +21,11 @@ struct MatchView: View {
         VStack {
             Form {
                 Section(header: Text("Location")) {
-                    Text(vm.data.user.matches[0].location)
+                    Text(viewModel.data.user.matches[0].location)
                     
                 }
                 Section(header: Text("Players")) {
-                    ForEach(vm.data.user.matches[0].players) { player in
+                    ForEach(viewModel.data.user.matches[0].players) { player in
                         Text(player.firstName + " " + player.lastName)
                     }
                     
@@ -40,6 +40,6 @@ struct MatchView: View {
 
 struct MatchView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchView(vm: RegistaViewModel())
+        MatchView()
     }
 }

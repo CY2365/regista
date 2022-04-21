@@ -9,39 +9,25 @@ import SwiftUI
 
 struct RegistaView: View {
     
-    @ObservedObject var vm: RegistaViewModel
+    @EnvironmentObject var viewModel: RegistaViewModel
+	
+	var matches: [RegistaData.Match] {
+		viewModel.data.user.matches
+	}
     
     
     var body: some View {
 		TabView {
-			AccountView()
-				.tabItem {
-					Label("Account", systemImage: "person.crop.circle")
-			}
-            listView
+			AccountView().tabItem { Label("Account", systemImage: "person.crop.circle") }
+			ListView(matches: matches).tabItem { Label("Matches", systemImage: "sportscourt") }
         }
     }
 	
-	private var listView: some View {
-		NavigationView {
-			List {
-                ForEach(vm.data.user.matches) { match in
-                    NavigationLink(destination: MatchView(vm: vm)) {
-                        Text(vm.dateToString(match.date))
-					}
-				}
-				
-            }.navigationBarTitle(Text("Your Matches"))
-			
-		}.tabItem {
-			Label("Matches", systemImage: "sportscourt")
-        }
-	}
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistaView(vm: RegistaViewModel())
+        RegistaView()
     }
 }
 

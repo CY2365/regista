@@ -15,6 +15,7 @@
 		B3219BD0280EE19000749DC5 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3219BCF280EE19000749DC5 /* MatchView.swift */; };
 		B321CC22280DE9F30073AA65 /* RegistaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321CC21280DE9F20073AA65 /* RegistaData.swift */; };
 		B321CC24280DED700073AA65 /* RegistaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B321CC23280DED700073AA65 /* RegistaViewModel.swift */; };
+		B393EE21280F509400983706 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393EE20280F509400983706 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B3219BCF280EE19000749DC5 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		B321CC21280DE9F20073AA65 /* RegistaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistaData.swift; sourceTree = "<group>"; };
 		B321CC23280DED700073AA65 /* RegistaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistaViewModel.swift; sourceTree = "<group>"; };
+		B393EE20280F509400983706 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				B30F2D8727F9D41100ADBFDF /* RegistaApp.swift */,
 				B30F2D8927F9D41100ADBFDF /* RegistaView.swift */,
+				B393EE20280F509400983706 /* ListView.swift */,
 				B3219BCF280EE19000749DC5 /* MatchView.swift */,
 				B321CC23280DED700073AA65 /* RegistaViewModel.swift */,
 				B30F2D9527F9E35500ADBFDF /* AccountView.swift */,
@@ -152,6 +155,7 @@
 				B321CC24280DED700073AA65 /* RegistaViewModel.swift in Sources */,
 				B30F2D9627F9E35500ADBFDF /* AccountView.swift in Sources */,
 				B321CC22280DE9F30073AA65 /* RegistaData.swift in Sources */,
+				B393EE21280F509400983706 /* ListView.swift in Sources */,
 				B30F2D8A27F9D41100ADBFDF /* RegistaView.swift in Sources */,
 				B3219BD0280EE19000749DC5 /* MatchView.swift in Sources */,
 				B30F2D8827F9D41100ADBFDF /* RegistaApp.swift in Sources */,

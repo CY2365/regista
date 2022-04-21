@@ -9,7 +9,9 @@ import SwiftUI
 
 class RegistaViewModel: ObservableObject {
     
-    @Published var data = RegistaData()
+	@Published var data = RegistaData()
+	
+	
     
     func dateToString(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
